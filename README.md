@@ -1,18 +1,30 @@
 # FCND-Estimation
 4th Project - Building an Estimator 
 
+![Photo_1](./image/Photo_1.png)
 
-**Senario 1 : Sensor Noise**
+This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this project, by using Extended Kalman Filter (EKF) estimation method, the estimation portion of the controller which is used in the CPP simulator is developed.By the end of the project, my simulated quad flies with my estimator and my custom controller. This project consists of 6 steps.
 
-In this senario , 
+* Step 1: Sensor Noise
+* Step 2: Attitude Estimation
+* Step 3: Prediction Step
+* Step 4: Magnetometer Update
+* Step 5: Closed Loop + GPS Update
+* Step 6: Adding Your Controller
 
-.... `x`.
+Each step is given below detailed.
+
+**Step 1 : Sensor Noise**
+
+In this step , breifly, collecting some simulated noisy sensor data and estimate the standard deviation of the quad's sensor
 
 <p align="center">
 <img src="animations/scenario1.gif" width="500"/>
 </p>
 
 Performance Evaluation:
+
+* Standard deviations should accurately capture the value of approximately 68% of the respective measurements.
 
 Result: 
 
