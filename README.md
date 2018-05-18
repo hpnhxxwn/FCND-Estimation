@@ -24,7 +24,7 @@ In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU
 
 Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_cal.py) code. To obation standard deviation ,  [`numpy.std`](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html)[2] is used.
 
-**Success criteria:
+**Success Criteria:
 
 * Standard deviations should accurately capture the value of approximately 68% of the respective measurements.
 
@@ -33,7 +33,7 @@ Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_c
 ![Photo_2](./image/Photo_2.png)
 
 
-**Senario 2 : Attitude Estimation**
+## Senario 2 : Attitude Estimation
 
 In this senario , 
 
