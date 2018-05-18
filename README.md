@@ -24,6 +24,10 @@ In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU
 
 Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_cal.py) code. To obation standard deviation ,  [`numpy.std`](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html)[2] is used.
 
+```
+GPS X Standard Deviation: 0.6797007868796459
+ACC X Standard Deviation: 0.475746035407147
+```
 **Success Criteria:**
 
 * Standard deviations should accurately capture the value of approximately 68% of the respective measurements.
