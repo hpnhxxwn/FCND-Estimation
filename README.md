@@ -16,7 +16,7 @@ Each step is given below detailed.
 
 **Step 1 : Sensor Noise**
 
-In this step , breifly, collecting some simulated noisy sensor data and estimate the standard deviation of the quad's sensor
+In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU measurements) and estimate the standard deviation of those sensor
 
 <p align="center">
 <img src="animations/scenario1.gif" width="500"/>
