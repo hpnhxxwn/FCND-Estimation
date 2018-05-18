@@ -104,14 +104,14 @@ The second scenario ,updating the covariance matrix by using equations `Section 
 The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 205 to line 245.
 
 ```cpp    
-// From "Estimation for Quadrotors" paper ( Eq. 52 )
+  // From "Estimation for Quadrotors" paper ( Eq. 52 )
   float theta = pitch;
   float phi = roll ;
   float psi = yaw ;
 
-  RbgPrime(0,0) = (- ( cos(theta) * sin(psi) );
-  RbgPrime(0,1) = (- ( sin(phi) * sin(theta) * sin(psi) ) - ( cos(theta) * cos(psi) );
-  RbgPrime(0,2) = (- ( cos(phi) * sin(theta) * sin(psi) ) + ( sin(phi) * cos(psi) );
+  RbgPrime(0,0) = (- ( cos(theta) * sin(psi) ) );
+  RbgPrime(0,1) = (- ( sin(phi) * sin(theta) * sin(psi) ) - ( cos(theta) * cos(psi) ) );
+  RbgPrime(0,2) = (- ( cos(phi) * sin(theta) * sin(psi) ) + ( sin(phi) * cos(psi) ) );
 
   RbgPrime(1,0) = ( cos(theta) * cos(psi) ) ;
   RbgPrime(1,1) = ( sin(phi) * sin(theta) * cos(psi) ) - ( cos(phi) * sin(psi) );
