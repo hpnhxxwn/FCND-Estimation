@@ -8,6 +8,6 @@ acc_x_val = np.loadtxt('ACC_X.txt',delimiter=',',dtype='Float64',skiprows=1)[:,1
 
 acc_x_std  = np.std(acc_x_val)
 
-print("GPS X Standard Deviation:",gps_x_std)
+print("GPS X Standard Deviation (MeasuredStdDev_GPSPosXY):",gps_x_std)
 
-print("ACC X Standard Deviation:",acc_x_std)
+print("ACC X Standard Deviation (MeasuredStdDev_AccelXY):",acc_x_std)
