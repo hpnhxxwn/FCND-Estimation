@@ -2,7 +2,7 @@
 4th Project - Building an Estimator 
 
 
-![Photo_1](./image/Photo_1.PNG)
+![Photo_1](./image/Photo_1.png)
 
 
 This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this project, by using Extended Kalman Filter (EKF) estimation method, the estimation portion of the controller which is used in the CPP simulator is developed.By the end of the project, my simulated quad flies with my estimator and my custom controller. This project consists of 6 steps [1] .
@@ -44,11 +44,11 @@ PASS: ABS(Quad.IMU.AX-0.000000) was less than MeasuredStdDev_AccelXY for 67% of 
 
 In this setup , the complementary filter-type attitude filter is improved by integrating body rate `p,q,r` which obtained from rate gyro into the estimated pitch and roll angle.
 
-![Photo_2](./image/Photo_2.PNG)
+![Photo_2](./image/Photo_2.png)
 
 By using this equation[3], an instantaneous change in the Euler angles (world frame) is obtained from turn rate in the body frame. 
 
-![Photo_3](./image/Photo_3.PNG)
+![Photo_3](./image/Photo_3.png)
 
 After obtained Euler Rate, integrating into into the estimated pitch and roll angle.
 ```cpp
