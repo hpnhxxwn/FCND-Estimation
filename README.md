@@ -1,7 +1,7 @@
 # FCND-Estimation
 4th Project - Building an Estimator 
 
-![Photo_1](./image/Photo_1.png)
+![Photo_1](./image/Photo_1.PNG)
 
 This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this project, by using Extended Kalman Filter (EKF) estimation method, the estimation portion of the controller which is used in the CPP simulator is developed.By the end of the project, my simulated quad flies with my estimator and my custom controller. This project consists of 6 steps.
 
