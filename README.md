@@ -3,14 +3,14 @@
 
 ![Photo_1](./image/Photo_1.PNG)
 
-This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this project, by using Extended Kalman Filter (EKF) estimation method, the estimation portion of the controller which is used in the CPP simulator is developed.By the end of the project, my simulated quad flies with my estimator and my custom controller. This project consists of 6 steps.
+This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this project, by using Extended Kalman Filter (EKF) estimation method, the estimation portion of the controller which is used in the CPP simulator is developed.By the end of the project, my simulated quad flies with my estimator and my custom controller. This project consists of 6 steps [1] .
 
 * Step 1: Sensor Noise
 * Step 2: Attitude Estimation
 * Step 3: Prediction Step
 * Step 4: Magnetometer Update
 * Step 5: Closed Loop + GPS Update
-* Step 6: Adding Your Controller [1]
+* Step 6: Adding Your Controller
 
 Each step is given below detailed.
 
