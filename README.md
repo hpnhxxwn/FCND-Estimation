@@ -144,7 +144,7 @@ In this step,
 ```
 **Result:** 
 ```
-PASS: 
+ 
 ```
 
 **Senario 5 : Closed Loop + GPS Update**
