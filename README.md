@@ -99,7 +99,7 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 <img src="animations/step3_1.gif" width="500"/>
 </p>
 
-The second scenario ,updating the covariance matrix by using equations `Section 7.2 ` which is given in `Estimation for Quadrotors` paper [5]  
+The second scenario ,updating the covariance matrix by using equations `Section 7.2 ` which is given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
 
 The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 205 to line 245.
 
