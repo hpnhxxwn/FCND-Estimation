@@ -19,7 +19,7 @@ Each step is given below detailed.
 In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU measurements) and estimate the standard deviation of those sensor
 
 <p align="center">
-<img src="animations/scenario1.gif" width="500"/>
+<img src="animations/setup1.gif" width="500"/>
 </p>
 
 Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_cal.py) code. To obation standard deviation ,  [`numpy.std`](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html)[2] is used.
@@ -34,8 +34,10 @@ ACC X Standard Deviation: 0.475746035407147
 
 **Result:** 
 
-![Photo_2](./image/Photo_2.png)
-
+```
+PASS: ABS(Quad.GPS.X-Quad.Pos.X) was less than MeasuredStdDev_GPSPosXY for 68% of the time
+PASS: ABS(Quad.IMU.AX-0.000000) was less than MeasuredStdDev_AccelXY for 67% of the time
+```
 
 ## Senario 2 : Attitude Estimation
 
