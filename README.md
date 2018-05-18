@@ -129,52 +129,63 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 
 ## Step 4 : Magnetometer Update
 
-In this senario, 
+In this step, 
 
+```cpp    
+
+```
 <p align="center">
 <img src="animations/scenario4.gif" width="500"/>
 </p>
 
-Performance Evaluation:
-
+**Performance Evaluation:**
+```
 * 
-
-Result: 
-
-![Photo_5](./image/Photo_5.png)
+```
+**Result:** 
+```
+PASS: 
+```
 
 **Senario 5 : Closed Loop + GPS Update**
 
-In this senario, 
+In this step, 
 
+```cpp    
+
+```
 <p align="center">
 <img src="animations/scenario5.gif" width="500"/>
 </p>
 
-Performance Evaluation:
-
+**Performance Evaluation:**
+```
 * 
+```
+**Result:** 
+```
 
-Result: 
-
-![Photo_6](./image/Photo_6.png)
+```
 
 **Senario 6 : Adding Your Controller**
 
-In this senario, 
+In this step, 
 
+```cpp    
+
+```
 <p align="center">
 <img src="animations/scenario6.gif" width="500"/>
 </p>
 
-Performance Evaluation:
-
+**Performance Evaluation:**
+```
 * 
+```
+**Result:** 
+```
 
-Result: 
-
-![Photo_7](./image/Photo_7.png)
-
+```
 
 **References**
 * [1] https://github.com/udacity/FCND-Estimation-CPP
