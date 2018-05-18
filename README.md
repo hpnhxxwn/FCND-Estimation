@@ -14,7 +14,7 @@ This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this p
 
 Each step is given below detailed.
 
-**Step 1 : Sensor Noise**
+## Step 1 : Sensor Noise
 
 In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU measurements) and estimate the standard deviation of those sensor
 
@@ -22,11 +22,13 @@ In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU
 <img src="animations/scenario1.gif" width="500"/>
 </p>
 
-Performance Evaluation:
+Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_cal.py) code. To obation standard deviation ,  [`numpy.std`](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html) is used.
+
+**Success criteria:
 
 * Standard deviations should accurately capture the value of approximately 68% of the respective measurements.
 
-Result: 
+**Result: 
 
 ![Photo_2](./image/Photo_2.png)
 
