@@ -147,7 +147,7 @@ In this step,
  
 ```
 
-**Senario 5 : Closed Loop + GPS Update**
+## Senario 5 : Closed Loop + GPS Update
 
 In this step, 
 
@@ -167,7 +167,7 @@ In this step,
 
 ```
 
-**Senario 6 : Adding Your Controller**
+## Senario 6 : Adding Your Controller
 
 In this step, 
 
