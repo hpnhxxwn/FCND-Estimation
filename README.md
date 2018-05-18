@@ -1,7 +1,9 @@
 # FCND-Estimation
 4th Project - Building an Estimator 
 
+<p align="center">
 ![Photo_1](./image/Photo_1.PNG)
+</p>
 
 This is the last project of the Flying Car Nano Degree (FCND) - Term1. In this project, by using Extended Kalman Filter (EKF) estimation method, the estimation portion of the controller which is used in the CPP simulator is developed.By the end of the project, my simulated quad flies with my estimator and my custom controller. This project consists of 6 steps [1] .
 
@@ -16,7 +18,7 @@ Each step is given below detailed.
 
 ## Step 1 : Sensor Noise
 
-In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU measurements) and estimate the standard deviation of those sensor
+In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU measurements) and estimate the standard deviation of those sensor. 
 
 <p align="center">
 <img src="animations/step1.gif" width="500"/>
@@ -25,56 +27,54 @@ In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU
 Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_cal.py) code. To obation standard deviation ,  [`numpy.std`](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html)[2] is used.
 
 ```
-GPS X Standard Deviation: 0.6797007868796459
-ACC X Standard Deviation: 0.475746035407147
+GPS X Standard Deviation (MeasuredStdDev_GPSPosXY): 0.6797007868796459
+ACC X Standard Deviation (MeasuredStdDev_AccelXY): 0.475746035407147
 ```
 **Success Criteria:**
-
+```
 * Standard deviations should accurately capture the value of approximately 68% of the respective measurements.
-
+```
 **Result:** 
-
 ```
 PASS: ABS(Quad.GPS.X-Quad.Pos.X) was less than MeasuredStdDev_GPSPosXY for 68% of the time
 PASS: ABS(Quad.IMU.AX-0.000000) was less than MeasuredStdDev_AccelXY for 67% of the time
 ```
 
-## Senario 2 : Attitude Estimation
+## Step 2 : Attitude Estimation
 
-In this senario , 
+In this setup , the complementary filter-type attitude filter is improved by integrating body rate `p,q,r` which obtained from rate gyro into the estimated pitch and roll angle.
 
+<p align="center">
+![Photo_2](./image/Photo_2.PNG)
+</p>
 
-```cpp    
+By using this equation[3], an instantaneous change in the Euler angles (world frame) is obtained from turn rate in the body frame. 
 
-}
+![Photo_3](./image/Photo_3.PNG)
+
+After obtained Euler Rate, integrating into into the estimated pitch and roll angle.
+```cpp
+ // Predict
+  float predictedPitch = pitchEst + dtIMU * euler_dot.y;
+  float predictedRoll = rollEst + dtIMU * euler_dot.x;
+  ekfState(6) = ekfState(6) + dtIMU * euler_dot.z;	// yaw
 ```
-
-```cpp    
-
-}
-```
-
-```cpp    
-
-}
-```
-
+The implementation of this step is at `QuadEstimatorEKF.cpp` from line 74 to line 137. 
 
 <p align="center">
 <img src="animations/scenario2.gif" width="500"/>
 </p>
 
-Performance Evaluation:
+**Performance Evaluation:**
+```
+* Your attitude estimator needs to get within 0.1 rad for each of the Euler angles for at least 3 seconds.
+```
+**Result:** 
+```
+PASS: ABS(Quad.Est.E.MaxEuler) was less than 0.100000 for at least 3.000000 seconds
+```
 
-* 
-* 
-
-Result: 
-
-![Photo_3](./image/Photo_3.png)
-
-
-**Senario 3 : Prediction Step**
+## Step 3 : Prediction Step
 
 In this senario , 
 
