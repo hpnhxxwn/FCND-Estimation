@@ -19,7 +19,7 @@ Each step is given below detailed.
 In this step , breifly, collecting some simulated noisy sensor data (GPS and IMU measurements) and estimate the standard deviation of those sensor
 
 <p align="center">
-<img src="./animations/setup1.gif" width="500"/>
+<img src="animations/step1.gif" width="500"/>
 </p>
 
 Standard Deviation Calculation is obtaion by using [`std_cal.py`](./others/std_cal.py) code. To obation standard deviation ,  [`numpy.std`](https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html)[2] is used.
