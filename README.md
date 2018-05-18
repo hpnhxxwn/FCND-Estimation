@@ -151,7 +151,7 @@ Result:
 
 
 **References**
-* [1] https://github.com/udacity/FCND-Controls
+* [1] https://github.com/udacity/FCND-Estimation-CPP
 * [2] https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.std.html
 * [x] A. P. Schoellig, C. Wiltsche and R. D’Andrea, 2012, "Feed-Forward Parameter Identification for Precise Periodic
    Quadrocopter Motions", American Control Confrence, Fairmont Queen Elizabeth, Montreal, Canada, 27-29 June 2012 
