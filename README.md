@@ -135,7 +135,17 @@ The secon step, obtaining `Jacobian Matrix`  by using `GetRbgPrime()` and after 
 The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 247 to line 291.
 
 ```cpp    
- 
+  // From "Estimation for Quadrotors" paper ( Eq. 51 )
+  gPrime(0,3) = dt;
+  gPrime(1,4) = dt;
+  gPrime(2,5) = dt;
+  
+  gPrime(3, 6) = (RbgPrime(0) * accel).sum() * dt;
+  gPrime(4, 6) = (RbgPrime(1) * accel).sum() * dt;
+  gPrime(5, 6) = (RbgPrime(2) * accel).sum() * dt;
+  
+  // From "Estimation for Quadrotors" paper ( Section 3 ) 
+  ekfCov = gPrime * ekfCov * gPrime.transpose() + Q;
 ```
 <p align="center">
 <img src="animations/step3_2.gif" width="500"/>
