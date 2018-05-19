@@ -158,10 +158,24 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 
 ## Step 4 : Magnetometer Update
 
-In this step, 
+In this step, the information from the magnetometer is added to improve filter's performance in estimating the vehicle's heading.
 
-```cpp    
+![Photo_7](./image/Photo_7.png) [5]
 
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 326 to line 357.
+
+```cpp 
+  hPrime(0, 6) = 1; // hPrime= [ 0 0 0 0 0 1]
+
+  zFromX(0) = ekfState(6);
+
+  //normalize the difference between your measured and estimated yaw
+  float diff = magYaw - zFromX(0);
+  if ( diff > F_PI ) {
+    zFromX(0) += 2.f*F_PI;
+  } else if ( diff < -F_PI ) {
+    zFromX(0) -= 2.f*F_PI;
+  }
 ```
 <p align="center">
 <img src="animations/scenario4.gif" width="500"/>
@@ -169,7 +183,7 @@ In this step,
 
 **Performance Evaluation:**
 ```
-* 
+* Your goal is to both have an estimated standard deviation that accurately captures the error and maintain an error of less than 0.1rad in heading for at least 10 seconds of the simulation.
 ```
 **Result:** 
 ```
