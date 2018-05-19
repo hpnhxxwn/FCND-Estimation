@@ -231,22 +231,19 @@ PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
 
 ## Senario 6 : Adding Your Controller
 
-In this step, 
+In this step, my controller which was designed in Project 3 ([`FCND-Controls`](https://github.com/mehmetyldz87/FCND-Controls) ) performs and de-tune my controller accordingly.
 
-```cpp    
-
-```
 <p align="center">
 <img src="animations/step6.gif" width="500"/>
 </p>
 
 **Success Criteria:**
 ```
-* 
+*  Your objective is to complete the entire simulation cycle with estimated position error of < 1m.
 ```
 **Result:** 
 ```
-
+PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
 ```
 
 **References**
