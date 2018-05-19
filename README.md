@@ -178,7 +178,7 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
   }
 ```
 <p align="center">
-<img src="animations/scenario4.gif" width="500"/>
+<img src="animations/step4.gif" width="500"/>
 </p>
 
 **Performance Evaluation:**
@@ -187,7 +187,8 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 ```
 **Result:** 
 ```
- 
+PASS: ABS(Quad.Est.E.Yaw) was less than 0.120000 for at least 10.000000 seconds
+PASS: ABS(Quad.Est.E.Yaw-0.000000) was less than Quad.Est.S.Yaw for 57% of the time
 ```
 
 ## Senario 5 : Closed Loop + GPS Update
@@ -198,7 +199,7 @@ In this step,
 
 ```
 <p align="center">
-<img src="animations/scenario5.gif" width="500"/>
+<img src="animations/step5.gif" width="500"/>
 </p>
 
 **Success Criteria:**
@@ -218,7 +219,7 @@ In this step,
 
 ```
 <p align="center">
-<img src="animations/scenario6.gif" width="500"/>
+<img src="animations/step6.gif" width="500"/>
 </p>
 
 **Success Criteria:**
