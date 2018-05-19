@@ -99,7 +99,10 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 <img src="animations/step3_1.gif" width="500"/>
 </p>
 
-The second scenario ,updating the covariance matrix by using equations `Section 7.2 ` which is given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
+The second scenario, 
+The first step , calculating the partial derivative of the body-to-global rotation matrix in the function `GetRbgPrime()` by using equations `Section 7.2 ` which is given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
+
+![Photo_4](./image/Photo_4.png) 
 
 The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 205 to line 245.
 
@@ -121,7 +124,15 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
   RbgPrime(2,1) = 0;
   RbgPrime(2,2) = 0;
 ```
+The secon step, iplementing prediction step (predict the state covariance forward) by using by using equations `Section 3 ` which is given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
 
+![Photo_5](./image/Photo_5.png) 
+
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 247 to line 291.
+
+```cpp    
+ 
+```
 <p align="center">
 <img src="animations/step3_2.gif" width="500"/>
 </p>
