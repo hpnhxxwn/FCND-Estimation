@@ -63,7 +63,7 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 <img src="animations/step2.gif" width="500"/>
 </p>
 
-**Performance Evaluation:**
+**Success Criteria:**
 ```
 * Your attitude estimator needs to get within 0.1 rad for each of the Euler angles for at least 3 seconds.
 ```
@@ -126,6 +126,10 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 <img src="animations/step3_2.gif" width="500"/>
 </p>
 
+**Success Criteria:**
+```
+* This step doesn't have any specific measurable criteria being checked.
+```
 
 ## Step 4 : Magnetometer Update
 
@@ -158,7 +162,7 @@ In this step,
 <img src="animations/scenario5.gif" width="500"/>
 </p>
 
-**Performance Evaluation:**
+**Success Criteria:**
 ```
 * 
 ```
@@ -178,7 +182,7 @@ In this step,
 <img src="animations/scenario6.gif" width="500"/>
 </p>
 
-**Performance Evaluation:**
+**Success Criteria:**
 ```
 * 
 ```
