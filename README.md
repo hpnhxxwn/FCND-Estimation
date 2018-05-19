@@ -57,7 +57,7 @@ After obtained Euler Rate, integrating into the estimated pitch and roll angle.
   float predictedRoll = rollEst + dtIMU * euler_dot.x;
   ekfState(6) = ekfState(6) + dtIMU * euler_dot.z;	// yaw
 ```
-The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 74 to line 137. 
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp#L74) from line 74 to line 137. 
 
 <p align="center">
 <img src="animations/step2.gif" width="500"/>
@@ -78,7 +78,7 @@ This step consists of two scenarios;
 
 The first scenario , implementing the state prediction based on the acceleration measurement by using Dead Reckoning method [4]
 
-The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 162 to line 203.
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp#L162) from line 162 to line 203.
 
 ```cpp    
  //From Lesson 17 - Dead Reckoning Exercise 
@@ -104,7 +104,7 @@ The first step , calculating the partial derivative of the body-to-global rotati
 
 ![Photo_4](./image/Photo_4.png) 
 
-The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 205 to line 245.
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp#L205) from line 205 to line 245.
 
 ```cpp    
   // From "Estimation for Quadrotors" paper ( Eq. 52 )
@@ -124,7 +124,7 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
   RbgPrime(2,1) = 0;
   RbgPrime(2,2) = 0;
 ```
-The secon step, obtaining `Jacobian Matrix`  by using `GetRbgPrime()` and after iplementing prediction step (predict the state covariance forward) to  update the covariance matrix cov according to the EKF equation. For `Jacobian Matrix` equations in `Section 7.2` and prediction equations in `Section 3 ` which are given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
+The second step, obtaining `Jacobian Matrix`  by using `GetRbgPrime()` and after iplementing prediction step (predict the state covariance forward) to  update the covariance matrix cov according to the EKF equation. For `Jacobian Matrix` equations in `Section 7.2` and prediction equations in `Section 3 ` which are given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
 
 
 ![Photo_5](./image/Photo_5.png) 
@@ -132,7 +132,7 @@ The secon step, obtaining `Jacobian Matrix`  by using `GetRbgPrime()` and after 
 
 ![Photo_6](./image/Photo_6.png) 
 
-The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 247 to line 291.
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp#L247) from line 247 to line 300.
 
 ```cpp    
   // From "Estimation for Quadrotors" paper ( Eq. 51 )
@@ -162,7 +162,7 @@ In this step, the information from the magnetometer is added to improve filter's
 
 ![Photo_7](./image/Photo_7.png) [5]
 
-The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 326 to line 357.
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp#L340) from line 340 to line 371.
 
 ```cpp 
   hPrime(0, 6) = 1; // hPrime= [ 0 0 0 0 0 1]
@@ -197,7 +197,7 @@ In this step,  GPS update is implemented into estimator. by the help of the equa
 
 ![Photo_8](./image/Photo_8.png)
 
-The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 302 to line 338.
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp#L302) from line 302 to line 338.
 
 ```cpp    
   // From "Estimation for Quadrotors" paper ( Eq. 53 & Eq. 54 )
