@@ -126,11 +126,9 @@ The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEK
 ```
 The secon step, obtaining `Jacobian Matrix`  by using `GetRbgPrime()` and after iplementing prediction step (predict the state covariance forward) to  update the covariance matrix cov according to the EKF equation. For `Jacobian Matrix` equations in `Section 7.2` and prediction equations in `Section 3 ` which are given in [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5]  
 
-**Jacobian Matrix**
 
 ![Photo_5](./image/Photo_5.png) 
 
-**Predict**
 
 ![Photo_6](./image/Photo_6.png) 
 
