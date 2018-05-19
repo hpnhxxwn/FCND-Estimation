@@ -193,10 +193,28 @@ PASS: ABS(Quad.Est.E.Yaw-0.000000) was less than Quad.Est.S.Yaw for 57% of the t
 
 ## Senario 5 : Closed Loop + GPS Update
 
-In this step, 
+In this step,  GPS update is implemented into estimator. by the help of the equations `Section 7.3.1 ` from [`Estimation for Quadrotors`](https://www.overleaf.com/read/vymfngphcccj#/54894644/) paper [5] , implementation is achieved.
+
+![Photo_8](./image/Photo_8.png)
+
+The implementation of this step is at [`QuadEstimatorEKF.cpp`](./QuadEstimatorEKF.cpp) from line 302 to line 338.
 
 ```cpp    
+  // From "Estimation for Quadrotors" paper ( Eq. 53 & Eq. 54 )
+  zFromX(0) = ekfState(0);
+  zFromX(1) = ekfState(1);
+  zFromX(2) = ekfState(2);
+  zFromX(3) = ekfState(3);
+  zFromX(4) = ekfState(4);
+  zFromX(5) = ekfState(5);
 
+  // From "Estimation for Quadrotors" paper ( Eq. 55 )
+  hPrime(0, 0) = 1;
+  hPrime(1, 1) = 1;
+  hPrime(2, 2) = 1;
+  hPrime(3, 3) = 1;
+  hPrime(4, 4) = 1;
+  hPrime(5, 5) = 1;
 ```
 <p align="center">
 <img src="animations/step5.gif" width="500"/>
@@ -204,11 +222,11 @@ In this step,
 
 **Success Criteria:**
 ```
-* 
+* Your objective is to complete the entire simulation cycle with estimated position error of < 1m.
 ```
 **Result:** 
 ```
-
+PASS: ABS(Quad.Est.E.Pos) was less than 1.000000 for at least 20.000000 seconds
 ```
 
 ## Senario 6 : Adding Your Controller
