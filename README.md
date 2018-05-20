@@ -1,6 +1,7 @@
 # FCND-Estimation
 4th Project - Building an Estimator 
 
+[Detailed Project Explantion Page](https://github.com/udacity/FCND-Estimation-CPP)
 
 ![Photo_1](./image/Photo_1.png)
 
