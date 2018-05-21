@@ -228,7 +228,7 @@ MatrixXf QuadEstimatorEKF::GetRbgPrime(float roll, float pitch, float yaw)
   float psi = yaw ;
 
   RbgPrime(0,0) = (- ( cos(theta) * sin(psi) ) );
-  RbgPrime(0,1) = (- ( sin(phi) * sin(theta) * sin(psi) ) - ( cos(theta) * cos(psi) ) );
+  RbgPrime(0,1) = (- ( sin(phi) * sin(theta) * sin(psi) ) - ( cos(phi) * cos(psi) ) );
   RbgPrime(0,2) = (- ( cos(phi) * sin(theta) * sin(psi) ) + ( sin(phi) * cos(psi) ) );
 
   RbgPrime(1,0) = ( cos(theta) * cos(psi) ) ;
